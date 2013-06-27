@@ -13,11 +13,13 @@ Create a SeqFeatureStore database
 3. Need MySQL or <a href="http://www.sqlite.org/">SQlite</a>. 
 
 Use SQlite if you can, it is easier to install and use. If you do use MySQL, this line:
+<pre>
 -adaptor => 'DBI::SQLite',
-
+</pre>
 should be changed to 
+<pre>
 -adaptor => 'DBI::MySQL',
-
+</pre>
 
 How we created our Maize database
 ---------------------------------
