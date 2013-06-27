@@ -8,8 +8,23 @@ need libprimer3 release 2.3.5 or later.
 
 Create a SeqFeatureStore database 
 ---------------------------------
-- use bp_seqfeature_load.pl. This script comes with the BioPerl installation.
-- More info on <a href="http://www.bioperl.org/wiki/Bioperl_scripts">BioPerl Scripts</a>
+1. use bp_seqfeature_load.pl. This script comes with the BioPerl installation.
+2. More info on <a href="http://www.bioperl.org/wiki/Bioperl_scripts">BioPerl Scripts</a>
+3. the options we used to create our Maize database
+- Get GFF3: ftp://ftp.jgi-psf.org/pub/JGI_data/phytozome/v8.0/Zmays/annotation/Zmays_181_gene_exons.gff3.gz
+- Get Genome FASTA: http://ftp.maizesequence.org/current/assembly/ZmB73_RefGen_v2.tar.gz
+- To make the chromosome names the same in both the FASTA and GFF fils
+- combine and rename FASTA files
+- <pre>
+for i in `ls *fasta` ; do j=`echo $i | awk -F '.' '{print $1}'` export j ; perl -pe  's/>(.+)/>$ENV{j} $1
+/' $i ; done > ZmB73_v2_renamed.fa
+- rename chromosomes in GFF file
+- <pre>
+perl -pe 's/^(.+)\t/chr$1/' Zmays_181_gene.gff3 > Zmays_181_gene.renamed.gff3 
+</pre> 
+</pre> 
+- bp_seqfeature_load.pl -d maize.sqlite -a DBI::sqlite3 -c -f Zmays_181_gene.renamed.gff3  
+
 
 
 <pre>
