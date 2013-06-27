@@ -3,6 +3,9 @@ use warnings;
 use strict;
 use Bio::DB::SeqFeature::Store;
 use Data::Dumper;
+use FindBin qw($RealBin);
+my $scripts = $RealBin;
+
 my $sqlite = shift;
 my $gene_file = shift;
 die "Please provide a SQLite datafile of a seqfeature db" if !defined $sqlite;
@@ -18,7 +21,6 @@ my $db_obj = Bio::DB::SeqFeature::Store->new(
   -dsn     => $sqlite
 );
 
-my $scripts = '/rhome/robb/src/RT-PCR_primers/scripts';
 my $primer3_path = '/rhome/robb/src/primer3-2.3.5/src';
 open P3IN , ">$gene_file.P3IN" or die "Can't open $gene_file.P3IN for writing\n";
 
