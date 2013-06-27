@@ -66,9 +66,9 @@ foreach my $feature ( @features ) {
   pop @overlaps;
   print "$f_name has only one exon\n" if @exons == 0;
   ## for some reason primer3 is not liking the '-'
-  #my $seq = join ('-',@exons);
   my $seq = join ('',@exons);
-  #print ">$f_name\n$seq\n";
+  #my $seq_dash = join ('-',@exons);
+  #print ">$f_name\n$seq_dash\n";
 
 
 ## add write of primer3 input file
