@@ -3,13 +3,20 @@ RT-PCR_primers
 
 use a seqFeatureStore database to create sequence to use with Primer3 for primers that span exons
 
-need libprimer3 release 2.3.5 or later.
+Requied** libprimer3 release 2.3.5 or later.
 
 
 Create a SeqFeatureStore database 
 ---------------------------------
 1. use bp_seqfeature_load.pl. This script comes with the BioPerl installation.
 2. More info on <a href="http://www.bioperl.org/wiki/Bioperl_scripts">BioPerl Scripts</a>
+3. Need MySQL or <a href="http://www.sqlite.org/">SQlite</a>. 
+
+Use SQlite if you can, it is easier to install and use. If you do use MySQL, this line:
+-adaptor => 'DBI::SQLite',
+
+should be changed to 
+-adaptor => 'DBI::MySQL',
 
 
 How we created our Maize database
