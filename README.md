@@ -12,7 +12,7 @@ Create a SeqFeatureStore database
 2. More info on <a href="http://www.bioperl.org/wiki/Bioperl_scripts">BioPerl Scripts</a>
 3. Need MySQL or <a href="http://www.sqlite.org/">SQlite</a>. 
 
-Use SQlite if you can, it is easier to install and use.</br>
+Use SQlite if you can, it is easier to install and use.<br>
 If you do use MySQL, this line in getExonsForPrimers_inGene.pl:
 <pre>
 -adaptor => 'DBI::SQLite',
