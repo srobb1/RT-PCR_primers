@@ -8,7 +8,7 @@ need libprimer3 release 2.3.5 or later.
 
 Create a SeqFeatureStore database 
 ---------------------------------
-- use bp_seqfeature_load.pl. This script come with the BioPerl installation.
+- use bp_seqfeature_load.pl. This script comes with the BioPerl installation.
 - More info on <a href="http://www.bioperl.org/wiki/Bioperl_scripts">BioPerl Scripts</a>
 
 
