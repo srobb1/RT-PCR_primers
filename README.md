@@ -27,7 +27,7 @@ for i in `ls *fasta` ; do j=`echo $i | awk -F '.' '{print $1}'` export j ; perl 
 perl -pe 's/^(.+)\t/chr$1/' Zmays_181_gene.gff3 > Zmays_181_gene.renamed.gff3 
 </pre> 
 </pre> 
-- bp_seqfeature_load.pl -d maize.sqlite -a DBI::sqlite3 -c -f Zmays_181_gene.renamed.gff3  
+- bp_seqfeature_load.pl -d maize.sqlite -a DBI::SQLite -c -f Zmays_181_gene.renamed.gff3  
 
 
 
