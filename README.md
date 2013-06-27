@@ -10,6 +10,10 @@ Create a SeqFeatureStore database
 ---------------------------------
 1. use bp_seqfeature_load.pl. This script comes with the BioPerl installation.
 2. More info on <a href="http://www.bioperl.org/wiki/Bioperl_scripts">BioPerl Scripts</a>
+
+
+How we created our Maize database
+---------------------------------
 3. the options we used to create our Maize database
 - Get GFF3: ftp://ftp.jgi-psf.org/pub/JGI_data/phytozome/v8.0/Zmays/annotation/Zmays_181_gene_exons.gff3.gz
 - Get Genome FASTA: http://ftp.maizesequence.org/current/assembly/ZmB73_RefGen_v2.tar.gz
